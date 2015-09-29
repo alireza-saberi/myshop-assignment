@@ -1,0 +1,19 @@
+{
+  "name": "angularJS",
+  "version": "0.0.0",
+  "authors": [
+    "alireza-saberi <saberi.ar.eng@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.6",
+    "bootstrap": "~3.3.5"
+  }
+}
