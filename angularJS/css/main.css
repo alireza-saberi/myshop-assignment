@@ -1,5 +1,19 @@
-.col-center: {
+.col-center{
 	float: none;
 	margin: 0 auto;
 
 };
+
+/* ng-cloack */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+
+}
+
+.color-red{
+	color: red;
+}
+
+.color-green{
+	color: green;
+}

@@ -1,20 +1,22 @@
 <!doctype html>
-<html>
+<html data-ng-app="assignmentApp">
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="css/main.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-	<title>Shopiruit</title>
+	<title>My Shop</title>
 </head>
-<body>
+<body class="ng-cloak" data-ng-controller="assignmentController">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-md-6">
@@ -23,21 +25,75 @@
 						Lamp
 					</div>
   					<div class="panel-body">
-						<img src="images/lamp.png" class="img-responsive img-circle col-center"></img>
-						<h3><small>Number:</small></h3>
-						<h3><small>Total:</small></h3>
+						<img src="images/lamp.png" class="img-responsive  img-circle" style="margin:auto"></img>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Type</th>
+									<th>Variant</th>
+									<th>Price</th>
+									<th>Availibility</th>
+								</tr>
+							</thead>
+							<tbody data-ng-repeat="lamp in lamps">
+								<tr data-ng-repeat="variants in lamp.variants">
+									<td>{{lamp.title}}</td>
+									<td>{{variants.option1}}</td>
+									<td>{{variants.price|currency}}</td>
+									<td class="text-center">
+										<i class="fa fa-check-circle color-green"  data-ng-show="variants.available"></i>
+										<i class="fa fa-times color-red" data-ng-show="!variants.available"></i>
+									</td>
+								<tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>Total</td>
+									<td>&nbsp;</td>
+									<td>{{lampCosts|currency}}</td>
+									<td>&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
   					</div>
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-6">
 					<div class="panel panel-default">
 					<div class="panel-heading">
-						Lamp
+						Wallet
 					</div>
   					<div class="panel-body col-center">
-						<img src="images/wallet.png" class="img-responsive img-circle"></img>
-						<h3><small>Number:</small></h3>
-						<h3><small>Total:</small></h3>
+						<img src="images/wallet.png" class="img-responsive img-circle" style="margin:auto"></img>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Type</th>
+									<th>Variant</th>
+									<th>Price</th>
+									<th>Availibility</th>
+								</tr>
+							</thead>
+							<tbody data-ng-repeat="wallet in wallets">
+								<tr data-ng-repeat="variants in wallet.variants">
+									<td>{{wallet.title}}</td>
+									<td>{{variants.option1}}</td>
+									<td>{{variants.price|currency}}</td>
+									<td class="text-center">
+										<i class="fa fa-check-circle color-green"  data-ng-show="variants.available"></i>
+										<i class="fa fa-times color-red" data-ng-show="!variants.available"></i>
+									</td>
+								<tr>	
+							</tbody>
+							<tbody>
+								<tr>
+									<td>Total</td>
+									<td>&nbsp;</td>
+									<td>{{walletCosts|currency}}</td>
+									<td>&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
   					</div>
 				</div>
 			</div>
@@ -47,6 +103,9 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>		
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/assignmentapp.js"></script>
+    <script src="js/assignmentController.js"></script>		
 </body>
 </html>
