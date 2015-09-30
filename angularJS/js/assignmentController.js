@@ -38,8 +38,8 @@
 			$scope.walletCosts = walletCosts;
 			console.log(lamps);
 			console.log("Lamp costs is " + lampCosts);
-			console.log("Wallet costs is " + walletCost);
-			console.log("Total costs is " + (lampCosts+walletCost)) ;
+			console.log("Wallet costs is " + walletCosts);
+			console.log("Total costs is " + (lampCosts+walletCosts)) ;
 		}).error(function(err){
 			console.log("Error in reading data");
 		});
