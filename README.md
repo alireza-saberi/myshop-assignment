@@ -5,7 +5,7 @@ In this project, I try to solve the assignment with diffrent techniques that I k
 - NodeJS
 - Vanilla JS
 
-### Demo: responsive front-end for AngularJs codes
+### Demo: responsive front-end for AngularJS codes
 Two items are shown in two pannels, labeled by their name and information extracted from coming input JSON. e.g all the **type** and **variants** of these two items, their **price** and their **availability**.
 If the item is available the green checkmark appears, otherwise a red cross will be shown.
 ![shop](images/display.png)
@@ -18,3 +18,5 @@ As you can see the `L` item costs `$443.59` and the `W` item costs `$541.93`. So
 - Font-awesome: for availability 
 - AngularJS 
 - NodeJS
+- JQuery
+- Pure JS aka VanillaJS : Failed
