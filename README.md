@@ -16,3 +16,5 @@ As you can see the `L` item costs `$443.59` and the `W` item costs `$541.93`. So
 ### APIs and technologies so far:
 - Bootstrap: to make it responsive
 - Font-awesome: for availability 
+- AngularJS 
+- NodeJS
